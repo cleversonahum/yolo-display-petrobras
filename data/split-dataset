@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Generating file for train dataset
+ls train/ | grep ".jpg" > train.txt
+
+# Generating file for test dataset
+ls test/ | grep ".jpg" > test.txt
