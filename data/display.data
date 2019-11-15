@@ -1,6 +1,6 @@
 classes= 36
-train  = data/train.txt
-valid = data/test.txt
-names = data/display.names
-backup = backup/
+train  = yolo-display-petrobras/data/train.txt
+valid = yolo-display-petrobras/data/test.txt
+names = yolo-display-petrobras/data/display.names
+backup = backup
 
