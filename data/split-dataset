@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Generating file for train dataset
-ls train/ | grep ".jpg" > train.txt
+ls train/ | grep ".png" > train.txt
+#sed -i "s#^#$(pwd)/train/#" train.txt
+sed -i "s#^#yolo-display-petrobras/data/train/#" train.txt
 
 # Generating file for test dataset
-ls test/ | grep ".jpg" > test.txt
+ls test/ | grep ".png" > test.txt
+sed -i "s#^#yolo-display-petrobras/data/test/#" test.txt
