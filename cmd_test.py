@@ -1,6 +1,8 @@
 import subprocess
+import sys
 
-yolo_command = "./darknet detector test yolo-display-petrobras/data/display.data yolo-display-petrobras/cfg/yolov3.cfg backup/yolov3_6000.weights yolo-display-petrobras/data/test/dig2_9_92105.png"
+img_path = sys.argv[1]
+yolo_command = "./darknet detector test yolo-display-petrobras/data/display.data yolo-display-petrobras/cfg/yolov3.cfg backup/yolov3_6000.weights -dont_show "+img_path
 process = subprocess.Popen(yolo_command.split(), stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
 output, error = process.communicate()
 
